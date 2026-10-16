@@ -1,6 +1,7 @@
-function Sidebar(){
+function Sidebar({ usuario }){
     return(
         <aside className="sidebar">
+            <p className="sidebar-saludo">Hola, {usuario.nombre}</p>
             <h3 className="sidebar-titulo"> menu </h3>
 
             <nav>

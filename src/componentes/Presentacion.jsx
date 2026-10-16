@@ -1,4 +1,4 @@
-import foto from '../assets/images.jpg'
+import foto from '../Images/perfil.jpg'
 
 function Presentacion() {
   return (

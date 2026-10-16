@@ -1,21 +1,17 @@
-import fotoperfil from '../imagenes/cosmico.avif'
-
-function MenuUsuario() {
-  const nombre = 'Danier Fernando Quinayas'
-  const rol = 'Estudiante Adso'
-
+function MenuUsuario({ usuario }) {
   return (
     <div className='menu-usuario'>
       <button type='button' className='menu-usuario-boton'>
-        <img src={fotoperfil} alt={`foto de ${nombre}`} className='avatar' />
+        <img src={usuario.foto} alt={`Foto de ${usuario.nombre}`} className='avatar' />
         <span className='menu-usuario-datos'>
-          <span className='menu-usuario-nombre'>{nombre}</span>
-          <span className='menu-usuario-rol'>{rol}</span>
+          <span className='menu-usuario-nombre'>{usuario.nombre}</span>
+          <span className='menu-usuario-rol'>{usuario.rol}</span>
         </span>
-        <span className='felcha'>⬇️</span>
+        <span className='menu-usuario-flecha'>⬇️</span>
       </button>
 
-      <ul className='menu-ddesplegable'>
+      <ul className='menu-desplegable'>
+        <li className='menu-usuario-correo'>{usuario.correo}</li>
         <li><a href='#'>🙎 mi perfil</a></li>
         <li><a href='#'>⚙️ configuracion</a></li>
         <li className='separador'></li>

@@ -1,20 +1,27 @@
 import './App.css'
 import Encabezado from './componentes/Encabezado'
-import Sidebar from './componentes/sidebar'
+import Sidebar from './componentes/Sidebar'
 import Tarjeta from './componentes/Tarjeta'
 import PiePagina from './componentes/PiePagina'
 import Presentacion from './componentes/Presentacion'
+import fotoPerfil from './Images/perfil.jpg'
 
 
 function App() {
   const programa = 'Análisis y Desarrollo de Software'
+  const usuario = {
+    nombre: 'Danier Fernando Quinayas Cordoba',
+    rol: 'Aprendiz ADSO',
+    foto: fotoPerfil,
+    correo: 'danierf.q@gmail.com',
+  }
 
   return (
     <div className='pagina'>
-      <Encabezado />
+      <Encabezado usuario={usuario} />
 
       <div className='layout'>
-        <Sidebar />
+        <Sidebar usuario={usuario} />
       <main className='contenido'>
         <h2>Bienvenidos al programa {programa}</h2>
         <Presentacion />
