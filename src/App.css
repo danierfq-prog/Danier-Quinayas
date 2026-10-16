@@ -431,3 +431,99 @@ a {
     padding-right: 1rem;
   }
 }
+
+/* Contenedor de la tarjeta */
+.tarjeta {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Icono */
+.tarjeta-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+
+    background-color: #e0e7ff;
+    color: #4338ca;
+    font-size: 28px;
+}
+
+/* Título */
+.tarjeta h3 {
+    margin: 4px 0;
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Descripción */
+.tarjeta p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Duración */
+.tarjeta .tarjeta-horas {
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+
+    color: #4f46e5;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Tarjeta destacada */
+.tarjeta-destacada {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border: none;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+.tarjeta-destacada .tarjeta-icono {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.tarjeta-destacada h3,
+.tarjeta-destacada p,
+.tarjeta-destacada .tarjeta-horas {
+    color: #ffffff;
+}
+
+.tarjeta-destacada .tarjeta-horas {
+    border-top-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Diseño adaptable */
+@media (max-width: 600px) {
+    .tarjeta {
+        padding: 18px;
+    }
+
+    .tarjeta h3 {
+        font-size: 1.1rem;
+    }
+}
