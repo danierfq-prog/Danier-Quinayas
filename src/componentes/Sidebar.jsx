@@ -1,22 +1,23 @@
-function Sidebar({ usuario }){
+import {opcionesMenu} from '../data/menu.js';
+function Sidebar(){
     return(
-        <aside className="sidebar">
-            <p className="sidebar-saludo">Hola, {usuario.nombre}</p>
-            <h3 className="sidebar-titulo"> menu </h3>
-
+        <aside className ="sidebar">
+            <h3 className="sidebar-titulo">Menu</h3>
             <nav>
-                <ul className="sidebar-menu">
-                    <li> <a href="#">🏠 inicio </a></li>
-                    <li> <a href="#">🧑‍🦰 mi perfil </a></li>
-                    <li> <a href="#">💽 tecnologias</a></li>
-                    <li> <a href="#">🫙 Recursos</a></li>
-                    <li> <a href="#">📞 contactos¿</a></li>
+                <ul className="sider-menu">
+                    {opcionesMenu.map((opcion)=>(
+                        <li key={opcion.id}>
+                            <a href={opcion.url}>
+                                {opcion.icono} {opcion.texto}
+                            </a>
+                        </li>
+                    ))}
 
                 </ul>
             </nav>
             <p className="sidebar-pie"> 3312943 - ADSO</p>
-
         </aside>
     )
 }
-export default Sidebar
+
+export default Sidebar;

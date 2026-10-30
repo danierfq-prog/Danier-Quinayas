@@ -13,6 +13,8 @@ function Presentacion() {
           <h1>Danier Fernando Quinayas</h1>
           <p className='perfil-barrio'>Barrio: Las veraneras</p>
 
+          <div className=''></div>
+
           <div className='perfil-contacto'>
             <h4>Medios de contacto</h4>
             <p>Correo: danierf.q@gmail.com</p>
